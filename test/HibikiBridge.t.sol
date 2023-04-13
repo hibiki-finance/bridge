@@ -25,13 +25,13 @@ contract BridgeTest is Test {
 	event PendingTokensClaimed(address indexed receiver, uint256 amount);
 	event Transfer(address indexed from, address indexed to, uint256 value);
 
-    function setUp() public {
+	function setUp() public {
 		token = new TestERC20();
 		gateway = new MockAxelarGateway();
 		gasService = new MockAxelarGasService();
-        bridge = new HibikiBridge(address(gateway), address(gasService), address(token));
+		bridge = new HibikiBridge(address(gateway), address(gasService), address(token));
 		token.approve(address(bridge), type(uint256).max);
-    }
+	}
 
 	function test_TokenAddressAfterDeploy() public {
 		assertEq(address(bridge.hibiki()), address(token));
