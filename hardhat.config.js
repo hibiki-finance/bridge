@@ -1,7 +1,8 @@
+require('dotenv').config();
 require('hardhat-gas-reporter');
 require('solidity-coverage');
 require('@nomiclabs/hardhat-ethers');
-const pk = process.env.EVM_PRIVATE_KEY;
+const pk = process.env.PRIVATE_KEY;
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
@@ -54,7 +55,7 @@ module.exports = {
 		},
 	},
 	paths: {
-		sources: './contracts',
+		sources: './src',
 		tests: "./test",
 		cache: "./cache",
 		artifacts: "./artifacts"

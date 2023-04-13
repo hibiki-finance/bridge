@@ -1,10 +1,11 @@
 {
   "name": "hibiki-bridge",
   "version": "1.0.0",
-  "description": "Bridge for the Hibiki token",
+  "description": "Bridge for the Hibiki token.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "forge test",
+	"coverage": "bash coverage.sh"
   },
   "author": "Fuwa",
   "license": "MIT",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "chai": "^4.3.7",
     "eslint-config-richardpringle": "^2.0.0",
     "hardhat": "^2.9.9",
     "hardhat-gas-reporter": "^1.0.8",

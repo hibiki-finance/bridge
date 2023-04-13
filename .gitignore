@@ -1,3 +1,30 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+broadcast
+
+# Docs
+docs/
+
+# Dotenv file and config
+.env
+.DS_Store
+.env
+secrets.json
+.vscode
+chain-config/*.json
+.aptos
+
+# Coverage file
+lcov.info
+coverage
+
+# Hardhat and Node
 node_modules
 build
 artifacts
@@ -6,12 +33,4 @@ yarn-error.log
 local.json
 gasLogs.json
 scripts/deployConst.js
-
 aptos-artifacts
-.DS_Store
-.env
-secrets.json
-
-.vscode
-chain-config/*.json
-.aptos

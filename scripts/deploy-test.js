@@ -1,8 +1,9 @@
+require('dotenv').config();
 const hre = require("hardhat");
 const { getDefaultProvider, Wallet } = require('ethers');
 
 async function main() {
-	const privateKey = process.env.EVM_PRIVATE_KEY;
+	const privateKey = process.env.PRIVATE_KEY;
 
 	// BSC Testnet config
 	const BscTestnetProvider = getDefaultProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");
